@@ -8,7 +8,7 @@ import InboxOutlinedIcon from '@mui/icons-material/InboxOutlined';
 import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
 import { Divider, ListItemText } from "@mui/material"
 import { useContext } from "react"
-import { UIContext } from "@/context"
+import { UIContext } from "@/context/ui"
 
 const menuItems: string[] =['Inbox', 'Starred', 'Send Email', 'Drafts']
 
