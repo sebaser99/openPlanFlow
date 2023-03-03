@@ -4,10 +4,16 @@ import { EntriesState } from '.';
 type EntriesActionType = 
  | {type: '[Entries] new_entry', payload: Entry}
  | {type: '[Entries] update_entry', payload: Entry}
+ | {type: '[Entries] refresh_entries', payload: Entry[]}
 
 
 export const entriesReducer = (state: EntriesState, action: EntriesActionType):EntriesState => {
   switch(action.type){
+    case '[Entries] refresh_entries':
+     return {
+       ...state,
+       entries: [...action.payload]
+     }
    case '[Entries] new_entry':
      return {
        ...state,
