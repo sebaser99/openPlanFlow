@@ -10,8 +10,9 @@ const entrySchema = new Schema({
         type: String,
         enum: {
             values: ['pending', 'in-progress', 'finished'],
-            message: '{VALUE} no es un status permitido'
-        }
+            message: '{VALUE} no es un status permitido',
+        },
+        default: 'pending'
     }
 });
 

@@ -26,6 +26,7 @@ export const EntryList: FC<Props> = ({status}) => {
       updateEntry(entry)
       setDraggingEntry(false)
     }
+
   return (
     <div onDrop={onDropEntry} onDragOver={allowDrop} className={isDraggingEntry ? styles.dragging : ''}>
         <Paper sx={{height:'calc(100vh - 180px)', backgroundColor:'transparent', padding: '2px 5px'}}>

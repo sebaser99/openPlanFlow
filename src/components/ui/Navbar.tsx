@@ -1,9 +1,13 @@
 import React, { useContext } from 'react'
-import { AppBar, IconButton, Toolbar, Typography } from '@mui/material'
+import { useRouter } from 'next/router';
+import NextLink from 'next/link';
+import { AppBar, IconButton, Link, Toolbar, Typography } from '@mui/material'
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import { UIContext } from '@/context/ui';
 
 export const NavBar = () => {
+  const router = useRouter()
+
   const {openSideMenu} = useContext(UIContext)
   return (
     <AppBar position='sticky'>
@@ -15,7 +19,10 @@ export const NavBar = () => {
             >
                 <MenuOutlinedIcon/>
             </IconButton>
-            <Typography variant='h6'>OpenPlanFlow</Typography>
+            <NextLink href='/' passHref legacyBehavior >
+              <Link  underline='none' color='white'><Typography variant='h6'>OpenPlanFlow</Typography></Link>
+            </NextLink>
+           
         </Toolbar>
 
     </AppBar>

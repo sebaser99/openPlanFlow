@@ -6,3 +6,12 @@ export interface Entry {
 }
 
 export type EntryStatus = 'pending' | 'in-progress' | 'finished'
+
+export interface EntryDeletedResponse {
+    message: string;
+    deleted: Entry;
+}
+export interface EntryUpdatedResponse {
+    message: string;
+    updated: Entry;
+}
